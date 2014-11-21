@@ -18,7 +18,7 @@ end
 
 # [ ---------- end methods ---------- ]
 
-say "Hello, I'm Calculatron. Let's calculate something together! ^_^"
+say "Hello, I'm Calculatron. Let's calculate something together! <(^_^ <)"
 
 say "What's your first number?"
 num1 = check_num
