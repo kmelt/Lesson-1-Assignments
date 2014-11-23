@@ -20,29 +20,37 @@ end
 
 say "Hello, I'm Calculatron. Let's calculate something together! <(^_^ <)"
 
-say "What's your first number?"
-num1 = check_num
+loop do
+  say "What's your first number?"
+  num1 = check_num
 
-say "What's the second number?"
-num2 = check_num
+  say "What's the second number?"
+  num2 = check_num
 
-begin
-  say "Choose 1 - 4 to decide how we'll calculate them."
-  say "1) add   2) subtract   3) multiply   4) divide"
-  calc_choice = gets.to_i
-end while !(1..4).include?(calc_choice)
+  begin
+    say "Choose 1 - 4 to decide how we'll calculate them."
+    say "1) add   2) subtract   3) multiply   4) divide"
+    calc_choice = gets.to_i
+  end while !(1..4).include?(calc_choice)
 
-case calc_choice
-  when 1
-    ans = num1.to_i + num2.to_i
-    print_result(ans)
-  when 2
-    ans = num1.to_i - num2.to_i
-    print_result(ans)
-  when 3
-    ans = num1.to_i * num2.to_i
-    print_result(ans)
-  when 4
-    ans = num1.to_f / num2.to_f
-    print_result(ans)
+  case calc_choice
+    when 1
+      ans = num1.to_i + num2.to_i
+      print_result(ans)
+    when 2
+      ans = num1.to_i - num2.to_i
+      print_result(ans)
+    when 3
+      ans = num1.to_i * num2.to_i
+      print_result(ans)
+    when 4
+      ans = num1.to_f / num2.to_f
+      print_result(ans)
+  end
+
+say "Do you have another calculation to make? (Y / N)"
+recalculate = gets.chomp.upcase
+
+break if recalculate != "Y"
+
 end
