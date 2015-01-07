@@ -48,9 +48,9 @@ loop do
       print_result(ans)
   end
 
-say "Do you have another calculation to make? (Y / N)"
-recalculate = gets.chomp.upcase
+  say "Do you have another calculation to make? (Y / N)"
+  recalculate = gets.chomp.upcase
 
-break if recalculate != "Y"
+  break if recalculate != "Y"
 
 end

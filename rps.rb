@@ -14,11 +14,11 @@ end
 def winning_msg (winning_choice)
   case winning_choice
   when 'R'
-    "rock smashes scissors!"
+    "rock smashes scissors"
   when 'P'
-    "paper covers rock!"
+    "paper covers rock"
   when 'S'
-    "scissors shred paper!"
+    "scissors shred paper"
   end
 end
 
@@ -43,9 +43,9 @@ loop do
   if pc_choice == user_choice
     say "It looks like there's a tie!"
   elsif (user_choice == 'R' && pc_choice == 'S') || (user_choice == 'P' && pc_choice == 'R') || (user_choice == 'S' && pc_choice == 'P')
-    say "Looks like you're the winner; #{winning_msg(user_choice)}"
+    say "Looks like you're the winner; #{winning_msg(user_choice)}!"
   else
-    say "Ha! Looks like I've won, since #{winning_msg(pc_choice)}"
+    say "Ha! Looks like I've won, since #{winning_msg(pc_choice)}!"
   end
   
   #rematch
